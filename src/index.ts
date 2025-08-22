@@ -4,6 +4,8 @@ import { Car } from "./bai3";
 import { Rectangle } from "./bai4";
 import { BankAccount } from "./bai5";
 import { Book } from "./bai6";
+import { User } from "./bai7";
+import { Product } from "./bai8";
 
 console.log("----------Bai 1---------------")
 var person = new Person ("Thai", 21);
@@ -31,3 +33,22 @@ console.log("Withdraw: " + bankAccount.withdraw(100));
 console.log("----------Bai 6---------------")
 var book = new Book("Muvo dich", "Amorim", 2025);
 book.displayInfo()
+
+console.log("----------Bai 7---------------")
+var user = new User("Huu Thai");
+user.$name = "Thai"
+console.log(user.$name)
+
+console.log("----------Bai 8---------------")
+const products: Product[] = [
+    new Product("Mouse", 50),
+    new Product("Keyboard", 120),
+    new Product("Monitor", 250),
+    new Product("USB Cable", 30),
+    new Product("Webcam", 150)
+];
+
+const expensiveProducts = products.filter(product => product.price > 100);
+console.log("\n===================== Bai 08 =====================");
+console.log("Products with price > 100:");
+expensiveProducts.forEach(product => product.displayInfo());
