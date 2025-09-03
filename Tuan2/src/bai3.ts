@@ -1,9 +1,9 @@
 export var promise3 = (): Promise<String> => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject("Something went wrong");
-    }, 1000);
-  });
+    return new Promise((_, reject) => {
+        setTimeout(() => {
+            reject("Something went wrong");
+        }, 1000);
+    });
 };
 
-promise3().catch(err => console.log(err))
+promise3().catch((err) => console.log(err));

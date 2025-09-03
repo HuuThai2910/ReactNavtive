@@ -6,4 +6,4 @@ exports.promise1 = new Promise((resolve, reject) => {
         resolve("Hello Async");
     }, 2000);
 });
-exports.promise1.then(result => console.log(result));
+exports.promise1.then((result) => console.log(result));

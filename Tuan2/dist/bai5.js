@@ -1,9 +1,9 @@
 "use strict";
-var simulateTask = (time) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Task done");
-        }, time * 1000);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.simulateTask = simulateTask;
+function simulateTask(time) {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve("Task done"), time);
     });
-};
-simulateTask(2).then((result) => console.log(result));
+}
+simulateTask(1000).then((result) => console.log(result));

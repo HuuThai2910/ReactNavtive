@@ -1,9 +1,6 @@
-var simulateTask = (time: number): Promise<String> => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Task done");
-    }, time * 1000);
-  });
-};
-
-simulateTask(2).then((result) => console.log(result));
+export function simulateTask(time: number): Promise<string> {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve("Task done"), time);
+    });
+}
+simulateTask(1000).then((result) => console.log(result));
